@@ -1,0 +1,113 @@
+{
+  "uid" : "3affb445a8b5ad70",
+  "name" : "test_div[except]",
+  "fullName" : "calculator.TestCase.test_calculator.TestCalc#test_div",
+  "historyId" : "3a6bf979453b1fb6a7f92f5703879aeb",
+  "time" : {
+    "start" : 1613871860640,
+    "stop" : 1613871860640,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert None == 0\n  +None\n  -0",
+  "statusTrace" : "self = <test_calculator.TestCalc object at 0x039BE4F0>, get_calc = <calculator.page.calculator.Calculator object at 0x0395FCB0>\nget_div_datas = [3, 0, 0]\n\n    @pytest.mark.run(order=3)\n    def test_div(self, get_calc, get_div_datas):\n        result = None\n        try:\n            # 调用div函数,返回的结果保存在result里面\n            result = get_calc.div(get_div_datas[0],get_div_datas[1])\n            # 判断result结果是否等于期望的值\n            if isinstance(result, float):\n                result = round(result, 2)\n        except ZeroDivisionError as e:\n            print(e)\n>       assert result == get_div_datas[2]\nE       assert None == 0\nE         +None\nE         -0\n\ntest_calculator.py:40: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_calc",
+    "time" : {
+      "start" : 1613871860307,
+      "stop" : 1613871860308,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "get_div_datas",
+    "time" : {
+      "start" : 1613871860638,
+      "stop" : 1613871860639,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "get_div_datas::0",
+    "time" : {
+      "start" : 1613871860650,
+      "stop" : 1613871860650,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "run(order=3)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "calculator.TestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_calculator"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalc"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-8M4A9CB"
+  }, {
+    "name" : "thread",
+    "value" : "4312-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "calculator.TestCase.test_calculator"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "get_div_datas",
+    "value" : "[3, 0, 0]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "run(order=3)" ]
+  },
+  "source" : "3affb445a8b5ad70.json",
+  "parameterValues" : [ "[3, 0, 0]" ]
+}
