@@ -1,6 +1,7 @@
 # # -*- coding: utf-8 -*-
 # # @Author : feier
 # # @File : conftest.py
+from py_Practice.calculator.page.calculator import Calculator
 import pytest
 import yaml
 import os
@@ -11,10 +12,10 @@ import os
 '''
 
 # # 通过 os.path.dirname 获取当前文件所在目录的路径
-from calculator.page.calculator import Calculator
+
 
 yaml_file_path = os.path.dirname(__file__) + "/data.yml"
-
+print(yaml_file_path)
 with open(yaml_file_path,encoding="utf-8") as f:
     datas = yaml.safe_load(f)
     print(datas)
